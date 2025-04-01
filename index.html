@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Planet Survivors</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Planet Survivors - ¡Una emocionante aventura de acción! Corta, dispara y sobrevive al caos. Derrota a los monstruos jefes del planeta y convírtete en el superviviente más fuerte en las guerras de arena.">
+	<meta name="theme-color" content="#080912">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Planet Survivors">
+	<meta property="og:description" content="¡Una emocionante aventura de acción! Corta, dispara y sobrevive al caos en una batalla épica por la supervivencia.">
+	<meta property="og:site_name" content="Planet Survivors">
+	<meta property="og:url" content="https://juega-vida.com">
+	<meta property="og:type" content="website">
+	<link rel="canonical" href="https://juega-vida.com/" />
+
+	<!-- Styles -->
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css?_v=20250120110803" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250120110803">
+
+	<!-- Favicon  -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- Liquid button svg filter -->
+	<svg width="0" height="0" class="hidden">
+		<defs>
+			<filter id="buttonFilter">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur">
+				</feGaussianBlur>
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9" result="buttonFilter"></feColorMatrix>
+				<feComposite in="SourceGraphic" in2="buttonFilter" operator="atop">
+				</feComposite>
+				<feBlend in="SourceGraphic" in2="buttonFilter"></feBlend>
+			</filter>
+		</defs>
+	</svg>
+
+	<!-- Preload critical assets -->
+	<link rel="preload" href="img/logo.webp" as="image">
+	<link rel="preload" href="files/hero.mp4" as="video" type="video/mp4">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="120" data-scroll-show class="header">
+			<div class="header__container">
+				<div class="header__wrapper">
+					<span></span>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="index.html#hero" class="menu__link">Inicio</a>
+								</li>
+								<li class="menu__item">
+									<a href="index.html#about" class="menu__link">Acerca de</a>
+								</li>
+								<li class="menu__item">
+									<a href="index.html#features" class="menu__link">Características</a>
+								</li>
+								<li class="menu__item">
+									<a href="index.html#platforms" class="menu__link">Galería</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<button type="button" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero">
+				<div class="hero__bg">
+					<div class="hero__overlay"></div>
+					<video class="hero__bg-video" autoplay muted loop playsinline poster="img/poster.webp">
+						<source src="files/hero.mp4" type="video/mp4">
+					</video>
+				</div>
+
+				<div class="hero__container">
+					<div class="hero__content">
+						<div class="hero__left">
+							<h1 class="hero__title">Planet Survivors</h1>
+							<p class="hero__subtitle">¡Sobrevive, Lucha, Conquista!</p>
+
+							<div class="hero__features">
+								<div class="hero__feature">
+									<i class="fa-solid fa-hand-fist hero__feature-icon"></i>
+									<span class="hero__feature-text">Combate Intenso</span>
+								</div>
+								<div class="hero__feature">
+									<i class="fas fa-crown hero__feature-icon"></i>
+									<span class="hero__feature-text">Jefes Épicos</span>
+								</div>
+								<div class="hero__feature">
+									<i class="fas fa-trophy hero__feature-icon"></i>
+									<span class="hero__feature-text">Arena PvP</span>
+								</div>
+								<div class="hero__feature">
+									<i class="fas fa-globe hero__feature-icon"></i>
+									<span class="hero__feature-text">Mundos Hostiles</span>
+								</div>
+							</div>
+
+							<div class="hero__actions">
+								<a href="#platforms" class="hero__button hero__button--primary">
+									<i class="fas fa-gamepad"></i>
+									<span class="hero__button-text">Jugar Ahora</span>
+								</a>
+								<a href="#trailer" class="hero__button hero__button--secondary">
+									<i class="fas fa-play"></i>
+									<span class="hero__button-text">Ver Tráiler</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about" id="about">
+				<div class="about__container">
+					<div class="about__content">
+						<div class="about__header">
+							<h2>Domina Mundos Hostiles</h2>
+							<span class="about__subtitle">Una Experiencia de Supervivencia Intensa</span>
+						</div>
+						<div class="about__grid">
+							<div class="about__info">
+								<div class="about__text-block">
+									<h3>La Aventura</h3>
+									<p>
+										En un futuro distante, la humanidad se enfrenta a su mayor desafío: la
+										supervivencia en planetas hostiles. Como uno de los últimos supervivientes,
+										deberás luchar contra criaturas mortales, recolectar recursos y dominar
+										poderosas habilidades para prosperar en estos mundos implacables.
+									</p>
+								</div>
+								<div class="about__text-block about__text-block--secondary">
+									<h3>El Desafío</h3>
+									<p>
+										Enfrenta épicas batallas contra jefes colosales, compite en la arena PvP y
+										mejora tu equipo con un extenso sistema de progresión. Cada decisión cuenta en
+										tu lucha por la supervivencia mientras exploras entornos únicos llenos de
+										peligros y tesoros.
+									</p>
+								</div>
+							</div>
+							<div class="about__stats">
+								<div class="about__stat about__stat--characters">
+									<div class="about__stat-content">
+										<div class="about__stat-number">
+											<span class="about__stat-value">100</span>
+											<span class="about__stat-plus">+</span>
+										</div>
+										<div class="about__stat-label">Habilidades</div>
+										<div class="about__stat-desc">para dominar</div>
+									</div>
+									<div class="about__stat-icon">
+										<i class="fas fa-bolt"></i>
+									</div>
+								</div>
+								<div class="about__stat about__stat--bosses">
+									<div class="about__stat-content">
+										<div class="about__stat-number">
+											<span class="about__stat-value">12</span>
+										</div>
+										<div class="about__stat-label">Jefes Épicos</div>
+										<div class="about__stat-desc">para derrotar</div>
+									</div>
+									<div class="about__stat-icon">
+										<i class="fas fa-crown"></i>
+									</div>
+								</div>
+								<div class="about__stat about__stat--worlds">
+									<div class="about__stat-content">
+										<div class="about__stat-number">
+											<span class="about__stat-value">6</span>
+										</div>
+										<div class="about__stat-label">Planetas</div>
+										<div class="about__stat-desc">por conquistar</div>
+									</div>
+									<div class="about__stat-icon">
+										<i class="fas fa-globe"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features" id="features">
+				<div class="features__container">
+					<div class="features__content">
+						<h2>Características Destacadas</h2>
+						<div class="features__grid">
+							<article class="features__item features__item--combat">
+								<div class="features__icon">
+									<i class="fa-solid fa-hand-fist"></i>
+								</div>
+								<div class="features__info">
+									<h3>Combate Intenso</h3>
+									<p>Sistema de combate <strong>dinámico</strong></p>
+									<span class="features__detail">Domina el arte de la espada y la pistola para
+										sobrevivir</span>
+								</div>
+							</article>
+							<article class="features__item features__item--bosses">
+								<div class="features__icon">
+									<i class="fas fa-skull"></i>
+								</div>
+								<div class="features__info">
+									<h3>Jefes Épicos</h3>
+									<p>Enfrenta a <strong>poderosos</strong> enemigos</p>
+									<span class="features__detail">Derrota a los monstruos jefe y obtén recompensas
+										únicas</span>
+								</div>
+							</article>
+							<article class="features__item features__item--pvp">
+								<div class="features__icon">
+									<i class="fas fa-users"></i>
+								</div>
+								<div class="features__info">
+									<h3>Modo Arena PvP</h3>
+									<p>Compite contra otros <strong>supervivientes</strong></p>
+									<span class="features__detail">Demuestra tu valentía en intensas batallas
+										multijugador</span>
+								</div>
+							</article>
+							<article class="features__item features__item--worlds">
+								<div class="features__icon">
+									<i class="fas fa-globe"></i>
+								</div>
+								<div class="features__info">
+									<h3>Mundos Únicos</h3>
+									<p>Explora <strong>planetas hostiles</strong></p>
+									<span class="features__detail">Descubre secretos y recursos en diversos
+										entornos</span>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="gallery" id="gallery">
+				<div class="gallery__container">
+					<div class="gallery__content">
+						<h2>Galería de Capturas</h2>
+						<p>Explora los Desafiantes Mundos de <strong>Planet Survivors</strong></p>
+					</div>
+					<div class="gallery__slider swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/01.webp" alt="Combate intenso en Planet Survivors" />
+								<div class="gallery__slide-caption">Combate Intenso</div>
+							</div>
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/02.webp" alt="Jefes épicos en Planet Survivors" />
+								<div class="gallery__slide-caption">Jefes Épicos</div>
+							</div>
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/03.webp" alt="Arena PvP en Planet Survivors" />
+								<div class="gallery__slide-caption">Arena PvP</div>
+							</div>
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/04.webp" alt="Mundos únicos en Planet Survivors" />
+								<div class="gallery__slide-caption">Mundos Únicos</div>
+							</div>
+						</div>
+						<div class="gallery__navigation">
+							<button type="button" class="gallery__prev" aria-label="Anterior">
+								<i class="fa-solid fa-chevron-left"></i>
+							</button>
+							<div class="gallery__pagination"></div>
+							<button type="button" class="gallery__next" aria-label="Siguiente">
+								<i class="fa-solid fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="trailer" id="trailer" style="position: relative; 
+				background: url('img/poster.webp') center/cover no-repeat;">
+				<div class="trailer__overlay"></div>
+				<div class="trailer__container">
+					<div class="trailer__content">
+						<h2>¡Sobrevive y Conquista!</h2>
+						<p>Explora el intenso mundo de <strong>Planet Survivors</strong> en acción</p>
+						<div class="button button--light button--trailer" data-video-src="files/hero.mp4" data-video-popup-trigger>
+							<a class="button__title">
+								<span class="title-btn">
+									<span class="text-default">Ver tráiler</span>
+									<span class="text-hover">Ver tráiler</span>
+								</span>
+							</a>
+							<span class="button__icon">
+								<i class="fa-solid fa-play"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="platforms" id="platforms">
+				<div class="platforms__bg">
+					<div class="platforms__bg-gradient"></div>
+					<div class="platforms__bg-noise"></div>
+				</div>
+				<div class="platforms__container">
+					<div class="platforms__content">
+						<h2>¡Domina el Universo!</h2>
+						<p>Elige tu plataforma y únete a la batalla por la supervivencia</p>
+					</div>
+					<div class="platforms__grid">
+						<div class="platforms__item">
+							<div class="platforms__icon">
+								<i class="fa-brands fa-android"></i>
+								<div class="platforms__icon-shine"></div>
+							</div>
+							<h3>Android</h3>
+							<p>Lucha en cualquier lugar</p>
+							<div class="platforms__meta">
+								<span class="platforms__badge">Free</span>
+								<span class="platforms__rating">
+									<i class="fas fa-star"></i>
+									<span>4.0</span>
+								</span>
+							</div>
+							<a href="https://play.google.com/store/apps/details?id=com.goeu.planet" class="platforms__button">
+								<span>Descargar para Android</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+						<div class="platforms__item">
+							<div class="platforms__icon">
+								<i class="fa-brands fa-apple"></i>
+								<div class="platforms__icon-shine"></div>
+							</div>
+							<h3>Apple</h3>
+							<p>Experiencia definitiva en iOS</p>
+							<div class="platforms__meta">
+								<span class="platforms__badge">Free</span>
+								<span class="platforms__rating">
+									<i class="fas fa-star"></i>
+									<span>4.1</span>
+								</span>
+							</div>
+							<a href="https://apps.apple.com/us/app/planet-survivors/id1641629028" class="platforms__button">
+								<span>Descargar para iOS</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__column">
+						<div class="footer__logo">
+							<a href="index.html" class="footer__logo">
+								<img src="img/logo.webp" alt="Planet Survivors Logo">
+							</a>
+						</div>
+						<p class="footer__description">
+							Planet Survivors es una emocionante aventura de acción donde lucharás por la supervivencia en planetas hostiles.
+							Derrota a los monstruos jefe, domina las guerras de arena y convírtete en el superviviente más fuerte.
+						</p>
+						<div class="footer__socials">
+							<a href="https://play.google.com/store/apps/details?id=com.goeu.planet" class="footer__social-link" target="_blank">
+								<i class="fa-brands fa-google-play"></i>
+							</a>
+							<a href="https://apps.apple.com/us/app/planet-survivors/id1641629028" class="footer__social-link" target="_blank">
+								<i class="fa-brands fa-apple"></i>
+							</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">Enlaces Rápidos</h3>
+						<ul class="footer__list">
+							<li><a href="index.html#hero" class="footer__link">Inicio</a></li>
+							<li><a href="index.html#about" class="footer__link">Acerca de</a></li>
+							<li><a href="index.html#features" class="footer__link">Características</a></li>
+							<li><a href="index.html#gallery" class="footer__link">Galería</a></li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">Legal</h3>
+						<ul class="footer__list">
+							<li><a href="privacy.html" class="footer__link">Política de Privacidad</a></li>
+							<li><a href="terms.html" class="footer__link">Términos de Servicio</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copyright">
+						<p>&copy; 2025 Planet Survivors. Todos los derechos reservados. <a href="https://juega-vida.com">juega-vida.com</a></p>
+					</div>
+				</div>
+			</div>
+			<button class="scroll-to-top" aria-label="Volver arriba">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+				</svg>
+			</button>
+		</footer>
+
+		<div id="cursor" class="ball"></div>
+		<div id="cursor_inner" class="ball"></div>
+		<!-- Video Popup -->
+		<div class="video-popup" data-video-popup>
+			<div class="video-popup__overlay" data-video-popup-overlay></div>
+			<div class="video-popup__content">
+				<div class="video-popup__player" data-video-popup-player>
+					<video controls preload="metadata">
+						<source type="video/mp4">
+					</video>
+				</div>
+				<button class="video-popup__close" data-video-popup-close>
+					<i class="fa-solid fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<button class="scroll-to-top" aria-label="Desplácese hacia arriba" style="--progress: 0deg">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M12 2L18.9282 8.92823L17.5141 10.3424L13 5.82843V22H11V5.82843L6.48579 10.3424L5.07166 8.92823L12 2Z" />
+			</svg>
+		</button>
+	</div>
+	<script src="js/app.min.js?_v=20250307132354"></script>
+</body>
+
+</html>
